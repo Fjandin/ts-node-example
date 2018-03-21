@@ -1,6 +1,6 @@
 import * as Sequelize from 'sequelize'
 
-interface UserAttributes {
+interface UserAttributesInput {
     id?: string
     email: string
     created_at?: string
@@ -8,10 +8,18 @@ interface UserAttributes {
     deleted_at?: string
 }
 
-type UserInstance = Sequelize.Instance<UserAttributes> & UserAttributes
+interface UserAttributesOutput {
+    id: string
+    email: string
+    created_at: string
+    updated_at: string
+    deleted_at?: string
+}
 
-export default (sequelize: Sequelize.Sequelize, DataTypes: Sequelize.DataTypes) =>
-    sequelize.define<UserInstance, UserAttributes>('user', {
-        id: {type: DataTypes.UUID, primaryKey: true, defaultValue: DataTypes.UUIDV4},
-        email: {type: DataTypes.STRING, unique: true, allowNull: false}
+type UserInstance = Sequelize.Instance<UserAttributesOutput> & UserAttributesOutput
+
+export default (sequelize: Sequelize.Sequelize) =>
+    sequelize.define<UserInstance, UserAttributesInput>('user', {
+        id: {type: Sequelize.UUID, primaryKey: true, defaultValue: Sequelize.UUIDV4},
+        email: {type: Sequelize.STRING, unique: true, allowNull: false}
     })

@@ -6,9 +6,10 @@ import startApp from 'app'
 import db, {sequelize} from 'db'
 
 async function init() {
-    await sequelize.sync()
+    await sequelize.sync({force: true})
+    await db.user.create({email: 'rene@fjandin.com'})
     const user = await db.user.findOne({raw: true, where: {email: 'rene@fjandin.com'}})
-    console.dir(user)
+    console.dir(user && user.email.toLowerCase())
     startApp()
 }
 
