@@ -1,0 +1,4 @@
+dist
+node_modules
+appDb.sqlite
+yarn-error.log
