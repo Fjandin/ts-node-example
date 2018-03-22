@@ -1,11 +1,13 @@
 import * as crypto from 'crypto'
 
 /**
- *
- * @param length number
- * @returns string
+ * Returns a secure random generated token
+ * ```js
+ * token(6)
+ * // returns "f97a3c"
+ * ```
  */
-export const token = (length: number): string => {
+export function token(length: number): string {
     return crypto
         .randomBytes(Math.ceil(length / 2))
         .toString('hex')

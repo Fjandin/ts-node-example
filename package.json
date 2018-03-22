@@ -8,7 +8,7 @@
     "dev": "nodemon --exec ts-node src/index.ts",
     "build": "tsc",
     "tslint": "tslint -c tslint.json './src/**/*.ts' --project tsconfig.json",
-    "typedoc": "typedoc doc src"
+    "typedoc": "typedoc --out doc src"
   },
   "nyc": {
     "extension": [
