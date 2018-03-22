@@ -1,7 +1,7 @@
 import * as Koa from 'koa'
 import * as Router from 'koa-router'
-import {token} from 'lib/utils'
 import logger from 'lib/logger'
+import {token} from 'lib/utils'
 
 export const app = new Koa()
 

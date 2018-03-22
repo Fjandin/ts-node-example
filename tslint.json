@@ -1,0 +1,40 @@
+{
+    "extends": [
+        "tslint-config-standard",
+        "tslint-config-prettier"
+    ],
+    "rules": {
+        "await-promise": [true, "Bluebird"],
+        "no-internal-module": false,
+        "no-implicit-dependencies": false,
+        "no-submodule-imports": false,
+        "space-before-function-paren": [false, "always"],
+        "no-empty": false,
+        "ter-indent": [
+            true,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "object-curly-spacing": [true, "never"],
+        "semicolon": [true, "never"],
+        "quotemark": [
+            true,
+            "single",
+            "avoid-escape",
+            "avoid-template"
+        ],
+        "prefer-conditional-expression": [false],
+        "max-classes-per-file": [false],
+        "no-console": [true, "log", "error"],
+        "no-floating-promises": false,
+        "ordered-imports": {
+            "severity": "warning",
+            "options": {
+                "import-sources-order": "lowercase-first",
+                "named-imports-order": "lowercase-first"
+            }
+        }
+    }
+}

@@ -7,12 +7,16 @@
     "test": "nyc mocha --opts ./test/mocha.opts -r ts-node/register",
     "dev": "nodemon --exec ts-node src/index.ts",
     "build": "tsc",
-    "tslint": "tslint",
-    "mocha": "mocha"
+    "tslint": "tslint -c tslint.json './src/**/*.ts' --project tsconfig.json",
+    "typedoc": "typedoc doc src"
   },
   "nyc": {
-    "extension": [".ts"],
-    "exclude": ["test/"],
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "test/"
+    ],
     "reporter": [
       "html",
       "text-summary"
@@ -37,6 +41,9 @@
     "sinon-chai": "3.0.0",
     "ts-node": "5.0.1",
     "tslint": "5.9.1",
+    "tslint-config-prettier": "1.10.0",
+    "tslint-config-standard": "7.0.0",
+    "typedoc": "0.11.1",
     "typescript": "2.7.2"
   },
   "dependencies": {

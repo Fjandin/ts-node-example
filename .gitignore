@@ -2,6 +2,7 @@
 .vscode/
 coverage/
 dist/
+doc/
 node_modules/
 appDb.sqlite
 yarn-error.log
