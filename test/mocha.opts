@@ -1,0 +1,6 @@
+--timeout 10000
+--recursive
+--check-leaks
+--exit
+--require ./test/setup.js
+./test/tests/**/*.ts

@@ -2,6 +2,7 @@
 process.env.NODE_PATH = __dirname // eslint-disable-line
 require('module').Module._initPaths()
 
+import 'source-map-support/register'
 import startApp from 'app'
 import db, {sequelize} from 'db'
 

@@ -18,5 +18,5 @@ export const sequelize = new Sequelize('appDb', '', '', {
 })
 
 export default {
-    user: user(sequelize, Sequelize)
+    user: user(sequelize)
 }
